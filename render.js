@@ -16,6 +16,8 @@ export function renderGoblin(goblinData) {
         goblinEl.classList.add('dead');
     }
     
+    faceEl.classList.add('img-booger');
+
     goblinEl.append(nameEl, faceEl, hpEl);
 
     return goblinEl;
