@@ -1,4 +1,5 @@
 // import functions and grab DOM elements
+import { renderGoblin } from './render.js';
 const deadNumberEl = document.querySelector('#deaded-number');
 const arnoldHPEl = document.querySelector('#arn-hp');
 const arnImgEl = document.querySelector('#arn-img');
