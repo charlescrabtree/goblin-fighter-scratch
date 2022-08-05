@@ -40,7 +40,7 @@ function displayGoblins() {
 
         if (goblin.hp > 0) {
             goblinEl.addEventListener('click', () => {
-                if (Math.random() < .25) {
+                if (Math.random() < .75) {
                     goblin.hp--;
                     alert('you hit poor wittle ' + goblin.name);
                 } else {
