@@ -8,9 +8,9 @@ const goblinListEl = document.querySelector('.goblins');
 let deadGobs = 0;
 let arnoldHP = 200;
 let goblins = [
-    { name: 'Samantha', hp: 4},
-    { name: 'Noi', hp: 6},
-    { name: 'Kalia', hp: 20}
+    { name: 'Samantha', hp: 4 },
+    { name: 'Noi', hp: 6 },
+    { name: 'Kalia', hp: 20 }
 ];
 // set event listeners 
 form.addEventListener('submit', (e) => {
@@ -45,10 +45,32 @@ function displayGoblins() {
                 } else {
                     alert ('Shame on you! You tried to hit ' + goblin.name + ' but you missed. Big meanie.');
                 }
-            }
-          }
+                if (Math.random() < .5) {
+                    arnoldHP--;
+                    alert(goblin.name + ' beat on you!');
+                } else {
+                    alert(goblin.name + ' tried to hit you, you big meanie, but they missed!');
+                }
 
-          goblinListEl.append(goblinEl);
+                if (goblin.hp === 0) {
+                    deadGobs++;
+                }
+                if (arnoldHP === 0) {
+                    arnImgEl.classList.add('game-over');
+                    alert('GET BACK TO DA CHOPPA!!!');
+                }
+
+                arnoldHPEl.textContent = arnoldHP;
+                deadNumberEl.textContent = deadGobs;
+
+                displayGoblins();
+
+            });
+          
+        }
+        
+
+        goblinListEl.append(goblinEl);
     }
 }
 
