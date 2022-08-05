@@ -1,27 +1,14 @@
-:root {
-    --background: rgb(224, 234, 247);
-    --header-background: white;
-    --footer-background: rgb(243, 242, 242);
-}
-
 body {
-    height: 100vh;
-    font-family: 'Rubik', san-serif;
-    background: var(--background);
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    background-color: #4E3524;
 }
 
 header {
-    position: sticky;
+    position: relative;
     top: 0;
     display: flex;
     align-items: center;
-    background-color: var(--header-background);
-}
-
-main {
-    padding: 20px;
+    justify-content: center;
+    color: rgb(250, 70, 22);
 }
 
 footer {
@@ -31,5 +18,50 @@ footer {
     font-size: .8em;
     display: flex;
     justify-content: flex-end;
-    background-color: var(--footer-background);
+}
+#board{
+    display: flex;
+    flex-direction: row;
+}
+
+#arn-img{
+    width: 500px;
+}
+
+.dead-gobs {
+    display: flex;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.arnold {
+    display: flex;
+    justify-content: center;
+}
+
+.gob-stats {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-top: 79px;
+    background-color: #4E3524;
+    color: rgb(116, 220, 46)
+
+}
+
+.arnold-shtats {
+    display: grid;
+    width: 500px;
+    color: rgb(250, 70, 22);
+}
+
+.img-booger {
+    width: 50%;
+    align-items: center;
+    justify-items: center;
+}
+.goblins{
+    display: flex;
 }
